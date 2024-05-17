@@ -1,12 +1,13 @@
 const nodemailer = require("nodemailer");
 
 export default async function handler(req:any, res:any) {
+
   if (req.method === "POST") {
       const body = req.body;
       const {name, email,options, message } = body;
 
       const transporter = nodemailer.createTransport({
-        port: 465,
+        port: 587,
         host: "smtp.gmail.com",
         auth: {
           user: process.env.EMAIL,
