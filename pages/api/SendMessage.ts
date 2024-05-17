@@ -31,7 +31,7 @@ export default async function handler(req:any, res:any) {
       await transporter.sendMail(mailData);
 
     } else {
-      console.log('fook')
+      console.log('fook?')
     }
   }
 
